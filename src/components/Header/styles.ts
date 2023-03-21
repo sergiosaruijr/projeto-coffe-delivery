@@ -4,6 +4,7 @@ export const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 2rem;
 `
 
 export const HeaderDivContainer = styled.div`
@@ -24,7 +25,7 @@ export const HeaderDivContainer = styled.div`
 
 export const LocationContainer = styled.div`
   background: ${(props) => props.theme['purple-100']};
-  color: ${(props) => props.theme['purple-600']};
+  color: ${(props) => props.theme['purple-300']};
   width: 100%;
   padding: 0.35rem;
 `
