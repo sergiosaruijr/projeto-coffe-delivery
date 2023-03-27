@@ -19,7 +19,7 @@ export function Header() {
         <div>
           <LocationContainer>
             <MapPin size={22} weight="fill" />
-            Localização
+            <p>Londrina, PR</p>
           </LocationContainer>
         </div>
 

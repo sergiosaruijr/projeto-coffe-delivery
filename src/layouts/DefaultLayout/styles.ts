@@ -6,10 +6,14 @@ export const LayoutContainer = styled.div`
   margin: 0 auto;
   padding-left: 10rem;
   padding-right: 10rem;
-  /* padding-top: 2rem; */
+  overflow-x: hidden;
 
   background: ${(props) => props.theme['white-back']};
 
   display: flex;
   flex-direction: column;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `

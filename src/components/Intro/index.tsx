@@ -1,5 +1,4 @@
 import {
-  CartIconContainer,
   ImageCoffeIntroContainer,
   IntroContainer,
   TextDetailsIntroContainer,
@@ -10,7 +9,7 @@ import iconCart from '../../assets/icon-cart.svg'
 import iconTimer from '../../assets/icon-timer.svg'
 import iconBox from '../../assets/icon-box.svg'
 import iconCoffee from '../../assets/icon-coffee.svg'
-import { ShoppingCart } from 'phosphor-react'
+// import { ShoppingCart } from 'phosphor-react'
 
 export function Intro() {
   return (
@@ -27,14 +26,15 @@ export function Intro() {
             Compra simples e segura
           </p>
           <p>
-            <img src={iconTimer} alt="" /> Entrega rápida e rastreada
-          </p>
-          <p>
             <img src={iconBox} alt="" />
             Embalagem mantém o café intacto
           </p>
           <p>
-            <img src={iconCoffee} alt="" /> O café chega fresquinho até você
+            <img src={iconTimer} alt="" />
+            Entrega rápida e rastreada
+          </p>
+          <p>
+            <img src={iconCoffee} alt="" />O café chega fresquinho até você
           </p>
         </TextDetailsIntroContainer>
       </TextIntroContainer>

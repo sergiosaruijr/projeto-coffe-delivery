@@ -4,15 +4,19 @@ export const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
+  max-width: 70rem;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  background: ${(props) => props.theme['white-back']};
 `
 
 export const HeaderDivContainer = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: center;
   gap: 0.75rem;
-
+  height: 6.5rem;
   div {
     border-radius: 8px;
     display: flex;
@@ -28,6 +32,11 @@ export const LocationContainer = styled.div`
   color: ${(props) => props.theme['purple-300']};
   width: 100%;
   padding: 0.35rem;
+
+  p {
+    color: ${(props) => props.theme['purple-600']};
+    font-size: 0.87rem;
+  }
 `
 
 export const CartContainer = styled.div`

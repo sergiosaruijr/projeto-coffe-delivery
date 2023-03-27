@@ -15,21 +15,21 @@ export const TextIntroContainer = styled.div`
     font-size: 3rem;
     font-weight: 800;
     line-height: 130%;
-    color: ${(props) => props.theme['gray-800']};
+    color: ${(props) => props.theme['gray-title']};
   }
 
   p {
     font-family: 'Roboto';
     font-size: 1.25rem;
     margin-top: 1rem;
-    color: ${(props) => props.theme['gray-700']};
+    color: ${(props) => props.theme['gray-subtitle']};
   }
 `
 
 export const ImageCoffeIntroContainer = styled.div`
   display: flex;
   padding-left: 3.5rem;
-  /* margin-bottom: 5.75rem; */
+  padding-bottom: 5.75rem;
 
   img {
     width: 29.75rem;
@@ -40,22 +40,23 @@ export const ImageCoffeIntroContainer = styled.div`
 export const TextDetailsIntroContainer = styled.div`
   display: flex;
   flex-flow: row wrap;
-  padding-top: 4.125rem;
+  padding-top: 4rem;
+  /* justify-content: space-between; */
+  align-items: center;
+  margin-bottom: 6.75rem;
 
   p {
     font-size: 1rem;
-  }
+    padding-bottom: 1.1rem;
+    padding-right: 2.5rem;
 
-  img {
-  }
+    /*As distancias do projeto
+    padding-bottom: 1.1rem;
+    padding-left: 0.75rem;
+    padding-right: 2.5rem; */
 
-  div {
-    background: ${(props) => props.theme['yellow-600']};
-    border-radius: 999px;
-    width: 15%;
-    display: flex;
-    justify-content: center;
-    border-top: 3px solid transparent;
-    border-bottom: 3px solid transparent;
+    img {
+      /* margin-top: 2rem; */
+    }
   }
 `
