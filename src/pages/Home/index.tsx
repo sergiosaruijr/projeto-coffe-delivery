@@ -7,7 +7,11 @@ import {
   HomeContainer,
 } from './styles'
 import { ShoppingCartSimple } from 'phosphor-react'
-import coffeeTradicional from '../../assets/coffees/coffee-tradicional.svg'
+import coffeeTradicional from '../../assets/coffees/coffee-expresso-tradicional.svg'
+import coffeeAmericado from '../../assets/coffees/coffee-expresso-americano.svg'
+import coffeeCremoso from '../../assets/coffees/coffee-expresso-cremoso.svg'
+import coffeeGelado from '../../assets/coffees/coffee-expresso-gelado.svg'
+import coffeeComLeite from '../../assets/coffees/coffee-com-leite.svg'
 
 export function Home() {
   return (
@@ -19,14 +23,16 @@ export function Home() {
           <HomeCoffeeContentContainer>
             <img src={coffeeTradicional} alt="" />
             <div>
-              <h4>TRADICIONAL</h4>
+              <div>
+                <h4>TRADICIONAL</h4>
+              </div>
             </div>
             <h1>Expresso Tradicional</h1>
             <p>O tradicional café feito com água quente e grãos moídos</p>
             {/* <h3>R$ 9,90</h3> */}
             <HomeCoffeeCartFooterContainer>
               <text>
-                <small>R$</small>9,90
+                <text>R$</text> 9,90
               </text>
               <span>1</span>
               <HomeCoffeeCartContainer>
@@ -35,7 +41,7 @@ export function Home() {
             </HomeCoffeeCartFooterContainer>
           </HomeCoffeeContentContainer>
           <HomeCoffeeContentContainer>
-            <img src={coffeeTradicional} alt="" />
+            <img src={coffeeAmericado} alt="" />
             <div>
               <div>
                 <h4>TRADICIONAL</h4>
@@ -46,7 +52,7 @@ export function Home() {
             {/* <h3>R$ 9,90</h3> */}
             <HomeCoffeeCartFooterContainer>
               <text>
-                <small>R$</small> 9,90
+                <text>R$</text> 9,90
               </text>
               <span>1</span>
               <HomeCoffeeCartContainer>
@@ -55,12 +61,17 @@ export function Home() {
             </HomeCoffeeCartFooterContainer>
           </HomeCoffeeContentContainer>
           <HomeCoffeeContentContainer>
-            <h4>TRADICIONAL</h4>
+            <img src={coffeeCremoso} alt="" />
+            <div>
+              <div>
+                <h4>TRADICIONAL</h4>
+              </div>
+            </div>
             <h1>Expresso Cremoso</h1>
             <p>Café expresso tradicional com espuma cremosa</p>
             <HomeCoffeeCartFooterContainer>
               <text>
-                <small>R$</small> 9,90
+                <text>R$</text> 9,90
               </text>
               <span>1</span>
               <HomeCoffeeCartContainer>
@@ -69,13 +80,21 @@ export function Home() {
             </HomeCoffeeCartFooterContainer>
           </HomeCoffeeContentContainer>
           <HomeCoffeeContentContainer>
-            <h4>TRADICIONAL</h4> <h4>GELADO</h4>
+            <img src={coffeeGelado} alt="" />
+            <div>
+              <div>
+                <h4>TRADICIONAL</h4>
+              </div>
+              <div>
+                <h4>GELADO</h4>
+              </div>
+            </div>
             <h1>Expresso Gelado</h1>
             <p>Bebida preparada com café expresso e cubos de gelo</p>
             {/* <h3>R$ 9,90</h3> */}
             <HomeCoffeeCartFooterContainer>
               <text>
-                <small>R$</small> 9,90
+                <text>R$</text> 9,90
               </text>
               <span>1</span>
               <HomeCoffeeCartContainer>
@@ -84,17 +103,22 @@ export function Home() {
             </HomeCoffeeCartFooterContainer>
           </HomeCoffeeContentContainer>
           <HomeCoffeeContentContainer>
+            <img src={coffeeComLeite} alt="" />
             <div>
-              <h4>TRADICIONAL</h4>
-              <h4>GELADO</h4>
+              <div>
+                <h4>TRADICIONAL</h4>
+              </div>
+              <div>
+                <h4>COM LEITE</h4>
+              </div>
             </div>
 
-            <h1>Expresso Gelado</h1>
-            <p>Bebida preparada com café expresso e cubos de gelo</p>
+            <h1>Café com Leite</h1>
+            <p>Meio a meio de expresso tradicional com leite vaporizado</p>
             {/* <h3>R$ 9,90</h3> */}
             <HomeCoffeeCartFooterContainer>
               <text>
-                <small>R$</small> 9,90
+                <text>R$</text> 9,90
               </text>
               <span>1</span>
               <HomeCoffeeCartContainer>

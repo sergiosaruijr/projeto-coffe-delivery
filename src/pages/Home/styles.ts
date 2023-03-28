@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const HomeContainer = styled.div`
-  background: ${(props) => props.theme['purple-100']};
+  /* background: ${(props) => props.theme['purple-100']}; */
   color: ${(props) => props.theme['yellow-300']};
   height: 85rem;
   width: 70rem;
@@ -26,7 +26,7 @@ export const HomeCoffeeBorderContentContainer = styled.div`
 
 export const HomeCoffeeCartFooterContainer = styled.footer`
   display: flex;
-  background: ${(props) => props.theme['yellow-300']};
+  /* background: ${(props) => props.theme['yellow-300']}; */
   color: ${(props) => props.theme['gray-subtitle']};
   width: 13rem;
   height: 2.375rem;
@@ -62,6 +62,8 @@ export const HomeCoffeeContentContainer = styled.div`
   h4 {
     font-size: 0.625rem;
     padding: 0.75rem;
+    text-transform: uppercase;
+    color: ${(props) => props.theme['yellow-600']};
   }
 
   p {
@@ -71,6 +73,17 @@ export const HomeCoffeeContentContainer = styled.div`
     padding-right: 1.25rem;
     text-align: center;
     padding-bottom: 3.06rem;
+  }
+
+  text {
+    font-family: 'Baloo 2';
+    font-size: 1.5rem;
+    text {
+      & {
+        font-family: 'Roboto';
+        font-size: 0.875rem;
+      }
+    }
   }
 
   img {
@@ -84,7 +97,6 @@ export const HomeCoffeeContentContainer = styled.div`
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    background: #333;
     width: 13rem;
     height: 1.312rem;
     margin-top: 8rem;
@@ -93,6 +105,10 @@ export const HomeCoffeeContentContainer = styled.div`
       & {
         background: ${(props) => props.theme['yellow-100']};
         margin-bottom: 8rem;
+        width: 40%;
+        height: 100%;
+        border-radius: 10px;
+        margin-left: 0.25rem;
       }
     }
   }
