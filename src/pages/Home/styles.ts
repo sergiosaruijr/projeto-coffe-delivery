@@ -5,6 +5,7 @@ export const HomeContainer = styled.div`
   color: ${(props) => props.theme['yellow-300']};
   height: 85rem;
   width: 70rem;
+  margin-bottom: 9rem;
   h1 {
     font-family: 'Baloo 2';
     font-size: 2rem;
@@ -34,6 +35,14 @@ export const HomeCoffeeCartFooterContainer = styled.footer`
   align-items: center;
   position: relative;
   margin-bottom: 2rem;
+
+  input {
+    text-align: center;
+    width: 100%;
+    background: none;
+    border: none;
+    color: ${(props) => props.theme['gray-title']};
+  }
 `
 
 export const HomeCoffeeContentContainer = styled.div`
@@ -61,7 +70,7 @@ export const HomeCoffeeContentContainer = styled.div`
 
   h4 {
     font-size: 0.625rem;
-    padding: 0.75rem;
+    /* padding: 0.75rem; */
     text-transform: uppercase;
     color: ${(props) => props.theme['yellow-600']};
   }
@@ -113,6 +122,26 @@ export const HomeCoffeeContentContainer = styled.div`
     }
   }
 `
+export const TagContainer = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 1rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+
+  span {
+    background: ${(props) => props.theme['yellow-100']};
+    color: ${(props) => props.theme['yellow-600']};
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    padding: 0.25rem 0.5rem;
+    font-weight: 700;
+  }
+`
+
 export const HomeCoffeeCartContainer = styled.button`
   width: 2.07rem;
   height: 2.07rem;

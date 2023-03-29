@@ -5,6 +5,7 @@ import {
   HomeCoffeeCartFooterContainer,
   HomeCoffeeContentContainer,
   HomeContainer,
+  TagContainer,
 } from './styles'
 import { ShoppingCartSimple } from 'phosphor-react'
 import coffeeTradicional from '../../assets/coffees/coffee-expresso-tradicional.svg'
@@ -22,11 +23,12 @@ export function Home() {
         <HomeCoffeeBorderContentContainer>
           <HomeCoffeeContentContainer>
             <img src={coffeeTradicional} alt="" />
-            <div>
-              <div>
+            {/* teste de tag */}
+            <TagContainer>
+              <span>
                 <h4>TRADICIONAL</h4>
-              </div>
-            </div>
+              </span>
+            </TagContainer>
             <h1>Expresso Tradicional</h1>
             <p>O tradicional café feito com água quente e grãos moídos</p>
             {/* <h3>R$ 9,90</h3> */}
@@ -34,7 +36,7 @@ export function Home() {
               <text>
                 <text>R$</text> 9,90
               </text>
-              <span>1</span>
+              <input>1</input>
               <HomeCoffeeCartContainer>
                 <ShoppingCartSimple size={22} weight="fill" />
               </HomeCoffeeCartContainer>

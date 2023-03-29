@@ -57,6 +57,29 @@ export const TextDetailsIntroContainer = styled.div`
 
     img {
       /* margin-top: 2rem; */
+      padding-top: 1rem;
     }
   }
 `
+// export const TextDetailsIntroContainer = styled.div`
+//   width: 100%;
+//   display: grid;
+//   grid-template-columns: 1fr 1fr;
+//   row-gap: 1.25rem;
+//   margin-top: 4.125rem;
+
+//   p {
+//     font-size: 1rem;
+//     padding-bottom: 1.1rem;
+//     padding-right: 2.5rem;
+
+//     /*As distancias do projeto
+//     padding-bottom: 1.1rem;
+//     padding-left: 0.75rem;
+//     padding-right: 2.5rem; */
+
+//     img {
+//       /* margin-top: 2rem; */
+//     }
+//   }
+// `
