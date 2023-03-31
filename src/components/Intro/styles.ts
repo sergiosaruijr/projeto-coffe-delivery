@@ -5,6 +5,8 @@ export const IntroContainer = styled.div`
   display: flex;
   align-items: center;
   padding-top: 5.87rem;
+  padding-left: 10rem;
+  padding-right: 10rem;
 `
 export const TextIntroContainer = styled.div`
   display: flex;

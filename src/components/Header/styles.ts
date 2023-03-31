@@ -6,12 +6,13 @@ export const HeaderContainer = styled.header`
   justify-content: space-between;
   /* margin-top: 2rem; */
   /* max-width: 70rem; */
-  width: 100%;
+  padding-left: 10rem;
+  padding-right: 10rem;
   position: sticky;
   top: 0px;
-
   z-index: 1;
-  background: ${(props) => props.theme.colors['gray-text']};
+
+  background: ${(props) => props.theme.colors['white-back']};
 `
 
 export const HeaderDivContainer = styled.div`

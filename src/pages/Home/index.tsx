@@ -7,11 +7,11 @@ import {
   HomeContainer,
 } from './styles'
 import { ShoppingCartSimple } from 'phosphor-react'
-import coffeeTradicional from '../../assets/coffees/coffee-expresso-tradicional.svg'
-import coffeeAmericado from '../../assets/coffees/coffee-expresso-americano.svg'
-import coffeeCremoso from '../../assets/coffees/coffee-expresso-cremoso.svg'
-import coffeeGelado from '../../assets/coffees/coffee-expresso-gelado.svg'
-import coffeeComLeite from '../../assets/coffees/coffee-com-leite.svg'
+import coffeeTradicional from '../../assets/coffeesImage/coffee-expresso-tradicional.svg'
+import coffeeAmericado from '../../assets/coffeesImage/coffee-expresso-americano.svg'
+import coffeeCremoso from '../../assets/coffeesImage/coffee-expresso-cremoso.svg'
+import coffeeGelado from '../../assets/coffeesImage/coffee-expresso-gelado.svg'
+import coffeeComLeite from '../../assets/coffeesImage/coffee-com-leite.svg'
 import { QuantityInput } from '../../components/QuantityInput'
 import { Tag } from '../../components/Intro/styles'
 
