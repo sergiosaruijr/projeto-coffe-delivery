@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 export const HomeContainer = styled.div`
-  /* background: ${(props) => props.theme['purple-100']}; */
-  color: ${(props) => props.theme['yellow-300']};
+  /* background: ${(props) => props.theme.colors['purple-100']}; */
+  color: ${(props) => props.theme.colors['yellow-300']};
   height: 85rem;
   width: 70rem;
   margin-bottom: 9rem;
@@ -11,7 +11,7 @@ export const HomeContainer = styled.div`
     font-size: 2rem;
     font-weight: 800;
     line-height: 130%;
-    color: ${(props) => props.theme['gray-title']};
+    color: ${(props) => props.theme.colors['gray-title']};
     margin-bottom: 3.37rem;
   }
 `
@@ -35,8 +35,8 @@ export const TagContainer = styled.div`
   flex-wrap: wrap;
 
   span {
-    background: ${(props) => props.theme['yellow-100']};
-    color: ${(props) => props.theme['yellow-600']};
+    background: ${(props) => props.theme.colors['yellow-100']};
+    color: ${(props) => props.theme.colors['yellow-600']};
     font-size: 0.875rem;
     text-transform: uppercase;
     padding: 0.25rem 0.5rem;
@@ -48,12 +48,8 @@ export const HomeCoffeeContentContainer = styled.div`
   width: 16rem;
   height: 19.375rem;
 
-  background: ${(props) => props.theme['gray-card']};
-  border-top-right-radius: 36px;
-  border-top-left-radius: 6px;
-  border-bottom-left-radius: 36px;
-  border-bottom-right-radius: 6px;
-  /* overflow: hidden; */
+  background: ${(props) => props.theme.colors['gray-card']};
+  border-radius: 6px 36px 6px 36px;
 
   display: flex;
   flex-direction: column;
@@ -66,16 +62,16 @@ export const HomeCoffeeContentContainer = styled.div`
     margin-bottom: 0.5rem;
   }
   //tirar
-  h4 {
+  /* h4 {
     font-size: 0.625rem;
     padding: 0.75rem;
     text-transform: uppercase;
-    color: ${(props) => props.theme['yellow-600']};
-  }
+    color: ${(props) => props.theme.colors['yellow-600']};
+  } */
 
   p {
     font-size: 0.875rem;
-    color: ${(props) => props.theme['gray-label']};
+    color: ${(props) => props.theme.colors['gray-label']};
     padding-left: 1.25rem;
     padding-right: 1.25rem;
     text-align: center;
@@ -84,7 +80,7 @@ export const HomeCoffeeContentContainer = styled.div`
 
   text {
     font-family: 'Baloo 2';
-    color: ${(props) => props.theme['gray-text']};
+    color: ${(props) => props.theme.colors['gray-text']};
     font-size: 1.5rem;
     text {
       & {
@@ -110,7 +106,7 @@ export const HomeCoffeeContentContainer = styled.div`
 
     /* div {
       & {
-        background: ${(props) => props.theme['yellow-100']};
+        background: ${(props) => props.theme.colors['yellow-100']};
         margin-bottom: 8rem;
         width: 40%;
         height: 100%;
@@ -123,8 +119,8 @@ export const HomeCoffeeContentContainer = styled.div`
 
 export const HomeCoffeeCartFooterContainer = styled.footer`
   display: flex;
-  background: ${(props) => props.theme['yellow-300']};
-  color: ${(props) => props.theme['gray-subtitle']};
+  /* background: ${(props) => props.theme.colors['yellow-300']}; */
+  color: ${(props) => props.theme.colors['gray-subtitle']};
   width: 13rem;
   height: 2.375rem;
   justify-content: space-between;
@@ -158,7 +154,7 @@ export const HomeCoffeeCartFooterContainer = styled.footer`
 // `
 export const HomeCoffeeCartContainer = styled.div`
   display: flex;
-  background: ${(props) => props.theme['gray-subtitle']};
+  /* background: ${(props) => props.theme.colors['gray-subtitle']}; */
   width: 7.375rem;
   height: 2.375rem;
   justify-content: space-between;
@@ -175,8 +171,8 @@ export const HomeCoffeeCartContainer = styled.div`
     height: 2.375rem;
     border-radius: 6px;
     border: 0 none;
-    background: ${(props) => props.theme['purple-600']};
-    color: ${(props) => props.theme['gray-card']};
+    background: ${(props) => props.theme.colors['purple-600']};
+    color: ${(props) => props.theme.colors['gray-card']};
 
     &:focus {
       box-shadow: 0 0 0 0;
@@ -186,7 +182,7 @@ export const HomeCoffeeCartContainer = styled.div`
 
     &:hover {
       transition: 120ms;
-      background: ${(props) => props.theme['purple-300']};
+      background: ${(props) => props.theme.colors['purple-300']};
     }
   }
 `

@@ -5,11 +5,11 @@ export function QuantityInput() {
   return (
     <QuantityInputContainer>
       <IconContainer id="minus">
-        <Minus size={14} weight="fill" />
+        <Minus size={14} weight="bold" />
       </IconContainer>
       <input type="number" readOnly value={1} />
       <IconContainer id="plus">
-        <Plus size={14} weight="fill" />
+        <Plus size={14} weight="bold" />
       </IconContainer>
     </QuantityInputContainer>
   )

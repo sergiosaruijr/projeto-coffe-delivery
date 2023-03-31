@@ -1,15 +1,17 @@
 import styled from 'styled-components'
-
+// arrumar
 export const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
   /* margin-top: 2rem; */
-  max-width: 70rem;
+  /* max-width: 70rem; */
+  width: 100%;
   position: sticky;
   top: 0px;
+
   z-index: 1;
-  background: ${(props) => props.theme['white-back']};
+  background: ${(props) => props.theme.colors['gray-text']};
 `
 
 export const HeaderDivContainer = styled.div`
@@ -28,19 +30,19 @@ export const HeaderDivContainer = styled.div`
 `
 
 export const LocationContainer = styled.div`
-  background: ${(props) => props.theme['purple-100']};
-  color: ${(props) => props.theme['purple-300']};
+  background: ${(props) => props.theme.colors['purple-100']};
+  color: ${(props) => props.theme.colors['purple-300']};
   width: 100%;
   padding: 0.35rem;
 
   p {
-    color: ${(props) => props.theme['purple-600']};
+    color: ${(props) => props.theme.colors['purple-600']};
     font-size: 0.87rem;
   }
 `
 
 export const CartContainer = styled.div`
-  background: ${(props) => props.theme['yellow-100']};
+  background: ${(props) => props.theme.colors['yellow-100']};
   width: 100%;
   padding: 0.35rem;
 `

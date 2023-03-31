@@ -8,7 +8,7 @@ export const LayoutContainer = styled.div`
   padding-right: 10rem;
   overflow-x: hidden;
 
-  background: ${(props) => props.theme['white-back']};
+  background: ${(props) => props.theme.colors['white-back']};
 
   display: flex;
   flex-direction: column;
