@@ -49,23 +49,3 @@ export const TextDetailsIntroContainer = styled.div`
     font-size: 1rem;
   }
 `
-export const Tag = styled.div`
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  width: 13rem;
-  height: 1.312rem;
-  margin-top: 8rem;
-
-  span {
-    font-size: 0.625rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: ${(props) => props.theme.colors['yellow-600']};
-    background: ${(props) => props.theme.colors['yellow-100']};
-    padding: 0.25rem 0.5rem;
-    margin-left: 0.25rem;
-    border-radius: 10px;
-  }
-`

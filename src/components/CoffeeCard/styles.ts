@@ -1,31 +1,66 @@
 import styled from 'styled-components'
 
-export const HomeContainer = styled.div`
-  /* background: ${(props) => props.theme.colors['purple-100']}; */
-  color: ${(props) => props.theme.colors['yellow-300']};
-  height: 85rem;
-  width: 70rem;
-  margin-bottom: 9rem;
-  margin-left: 10rem;
-
-  h1 {
-    font-family: 'Baloo 2';
-    font-size: 2rem;
-    font-weight: 800;
-    line-height: 130%;
-    color: ${(props) => props.theme.colors['gray-title']};
-    margin-bottom: 3.37rem;
-  }
-`
-
-export const HomeCoffeeBorderContentContainer = styled.div`
+export const BorderContentContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   row-gap: 2.5rem;
   flex-wrap: wrap;
-  /* overflow: auto; */
 `
+export const CoffeeContentContainer = styled.div`
+  width: 16rem;
+  height: 19.375rem;
+
+  background: ${(props) => props.theme.colors['gray-card']};
+  border-radius: 6px 36px 6px 36px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* h1 {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  } */
+  /* 
+  p {
+    font-size: 0.875rem;
+    color: ${(props) => props.theme.colors['gray-label']};
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    text-align: center;
+    padding-bottom: 2.06rem;
+  } */
+
+  /* text {
+    font-family: 'Baloo 2';
+    color: ${(props) => props.theme.colors['gray-text']};
+    font-size: 1.5rem;
+    text {
+      & {
+        font-family: 'Roboto';
+        font-size: 0.875rem;
+      }
+    }
+  } */
+
+  img {
+    position: absolute;
+    bottom: 13.125rem;
+    /* overflow-x: visible; */
+  }
+
+  div {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8rem;
+  }
+`
+
 export const Tag = styled.div`
   display: flex;
   flex-wrap: nowrap;
@@ -46,62 +81,24 @@ export const Tag = styled.div`
     border-radius: 10px;
   }
 `
-
-export const HomeCoffeeContentContainer = styled.div`
-  width: 16rem;
-  height: 19.375rem;
-
-  background: ${(props) => props.theme.colors['gray-card']};
-  border-radius: 6px 36px 6px 36px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  h1 {
-    font-size: 1.25rem;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-  }
-
-  p {
-    font-size: 0.875rem;
-    color: ${(props) => props.theme.colors['gray-label']};
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-    text-align: center;
-    padding-bottom: 2.06rem;
-  }
-
-  text {
-    font-family: 'Baloo 2';
-    color: ${(props) => props.theme.colors['gray-text']};
-    font-size: 1.5rem;
-    text {
-      & {
-        font-family: 'Roboto';
-        font-size: 0.875rem;
-      }
-    }
-  }
-
-  img {
-    position: absolute;
-    bottom: 13.125rem;
-    /* overflow-x: visible; */
-  }
-
-  div {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    margin-top: 8rem;
-  }
+export const NameCoffee = styled.h2`
+  font-size: 1.25rem;
+  font-family: 'Baloo 2';
+  font-weight: bolder;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: ${(props) => props.theme.colors['gray-text']};
+`
+export const DescriptionCoffe = styled.p`
+  font-size: 0.875rem;
+  color: ${(props) => props.theme.colors['gray-label']};
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  text-align: center;
+  padding-bottom: 2.06rem;
 `
 
-export const HomeCoffeeCartFooterContainer = styled.footer`
+export const CoffeeCartFooterContainer = styled.footer`
   display: flex;
   /* background: ${(props) => props.theme.colors['yellow-300']}; */
   color: ${(props) => props.theme.colors['gray-subtitle']};
@@ -112,8 +109,19 @@ export const HomeCoffeeCartFooterContainer = styled.footer`
   position: relative;
   margin-bottom: 2rem;
 `
+export const TextPriceCoffee = styled.text`
+  font-family: 'Baloo 2';
+  color: ${(props) => props.theme.colors['gray-text']};
+  font-size: 1.5rem;
+  text {
+    & {
+      font-family: 'Roboto';
+      font-size: 0.875rem;
+    }
+  }
+`
 
-export const HomeCoffeeCartContainer = styled.div`
+export const CoffeeCartAndPriceContainer = styled.div`
   display: flex;
   /* background: ${(props) => props.theme.colors['gray-subtitle']}; */
   width: 7.375rem;
