@@ -19,32 +19,6 @@ export const CoffeeContentContainer = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
-  /* h1 {
-    font-size: 1.25rem;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-  } */
-  /* 
-  p {
-    font-size: 0.875rem;
-    color: ${(props) => props.theme.colors['gray-label']};
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-    text-align: center;
-    padding-bottom: 2.06rem;
-  } */
-
-  /* text {
-    font-family: 'Baloo 2';
-    color: ${(props) => props.theme.colors['gray-text']};
-    font-size: 1.5rem;
-    text {
-      & {
-        font-family: 'Roboto';
-        font-size: 0.875rem;
-      }
-    }
-  } */
 
   img {
     position: absolute;

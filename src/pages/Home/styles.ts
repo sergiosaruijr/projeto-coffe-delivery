@@ -19,13 +19,12 @@ export const HomeContainer = styled.div`
 `
 
 export const HomeCoffeeBorderContentContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 2rem;
   row-gap: 2.5rem;
-  flex-wrap: wrap;
-  /* overflow: auto; */
 `
+
 export const Tag = styled.div`
   display: flex;
   flex-wrap: nowrap;
@@ -47,103 +46,103 @@ export const Tag = styled.div`
   }
 `
 
-export const HomeCoffeeContentContainer = styled.div`
-  width: 16rem;
-  height: 19.375rem;
+// export const HomeCoffeeContentContainer = styled.div`
+//   width: 16rem;
+//   height: 19.375rem;
 
-  background: ${(props) => props.theme.colors['gray-card']};
-  border-radius: 6px 36px 6px 36px;
+//   background: ${(props) => props.theme.colors['gray-card']};
+//   border-radius: 6px 36px 6px 36px;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  h1 {
-    font-size: 1.25rem;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-  }
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   position: relative;
+//   h1 {
+//     font-size: 1.25rem;
+//     margin-top: 1rem;
+//     margin-bottom: 0.5rem;
+//   }
 
-  p {
-    font-size: 0.875rem;
-    color: ${(props) => props.theme.colors['gray-label']};
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-    text-align: center;
-    padding-bottom: 2.06rem;
-  }
+//   p {
+//     font-size: 0.875rem;
+//     color: ${(props) => props.theme.colors['gray-label']};
+//     padding-left: 1.25rem;
+//     padding-right: 1.25rem;
+//     text-align: center;
+//     padding-bottom: 2.06rem;
+//   }
 
-  text {
-    font-family: 'Baloo 2';
-    color: ${(props) => props.theme.colors['gray-text']};
-    font-size: 1.5rem;
-    text {
-      & {
-        font-family: 'Roboto';
-        font-size: 0.875rem;
-      }
-    }
-  }
+//   text {
+//     font-family: 'Baloo 2';
+//     color: ${(props) => props.theme.colors['gray-text']};
+//     font-size: 1.5rem;
+//     text {
+//       & {
+//         font-family: 'Roboto';
+//         font-size: 0.875rem;
+//       }
+//     }
+//   }
 
-  img {
-    position: absolute;
-    bottom: 13.125rem;
-    /* overflow-x: visible; */
-  }
+//   img {
+//     position: absolute;
+//     bottom: 13.125rem;
+//     /* overflow-x: visible; */
+//   }
 
-  div {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    margin-top: 8rem;
-  }
-`
+//   div {
+//     display: flex;
+//     flex-wrap: nowrap;
+//     justify-content: center;
+//     align-items: center;
+//     margin-top: 8rem;
+//   }
+// `
 
-export const HomeCoffeeCartFooterContainer = styled.footer`
-  display: flex;
-  /* background: ${(props) => props.theme.colors['yellow-300']}; */
-  color: ${(props) => props.theme.colors['gray-subtitle']};
-  width: 13rem;
-  height: 2.375rem;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  margin-bottom: 2rem;
-`
+// export const HomeCoffeeCartFooterContainer = styled.footer`
+//   display: flex;
+//   /* background: ${(props) => props.theme.colors['yellow-300']}; */
+//   color: ${(props) => props.theme.colors['gray-subtitle']};
+//   width: 13rem;
+//   height: 2.375rem;
+//   justify-content: space-between;
+//   align-items: center;
+//   position: relative;
+//   margin-bottom: 2rem;
+// `
 
-export const HomeCoffeeCartContainer = styled.div`
-  display: flex;
-  /* background: ${(props) => props.theme.colors['gray-subtitle']}; */
-  width: 7.375rem;
-  height: 2.375rem;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  margin-bottom: 8rem;
-  > button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 0.5rem;
-    //ver isso de px e rem
-    width: 2.375rem;
-    height: 2.375rem;
-    border-radius: 6px;
-    border: 0 none;
-    background: ${(props) => props.theme.colors['purple-600']};
-    color: ${(props) => props.theme.colors['gray-card']};
+// export const HomeCoffeeCartContainer = styled.div`
+//   display: flex;
+//   /* background: ${(props) => props.theme.colors['gray-subtitle']}; */
+//   width: 7.375rem;
+//   height: 2.375rem;
+//   justify-content: space-between;
+//   align-items: center;
+//   position: relative;
+//   margin-bottom: 8rem;
+//   > button {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     margin-left: 0.5rem;
+//     //ver isso de px e rem
+//     width: 2.375rem;
+//     height: 2.375rem;
+//     border-radius: 6px;
+//     border: 0 none;
+//     background: ${(props) => props.theme.colors['purple-600']};
+//     color: ${(props) => props.theme.colors['gray-card']};
 
-    &:focus {
-      box-shadow: 0 0 0 0;
-      outline: 0;
-      border: 0 none;
-    }
+//     &:focus {
+//       box-shadow: 0 0 0 0;
+//       outline: 0;
+//       border: 0 none;
+//     }
 
-    &:hover {
-      transition: 120ms;
-      background: ${(props) => props.theme.colors['purple-300']};
-    }
-  }
-`
+//     &:hover {
+//       transition: 120ms;
+//       background: ${(props) => props.theme.colors['purple-300']};
+//     }
+//   }
+// `

@@ -4,8 +4,8 @@ import {
   TextDetailsIntroContainer,
   TextIntroContainer,
 } from './styles'
-import logoCoffeeIntro from '../../assets/logo-coffee-intro.svg'
-import { InfoIcon } from '../InfoIcon'
+import logoCoffeeIntro from '../../../../assets/logo-coffee-intro.svg'
+import { InfoIcon } from '../../../../components/InfoIcon'
 import { ShoppingCart, Package, Timer, Coffee } from 'phosphor-react'
 import { useTheme } from 'styled-components'
 
