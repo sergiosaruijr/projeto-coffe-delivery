@@ -5,9 +5,12 @@ export const FormAndPayContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 40rem;
-  height: 26.938rem;
-
-  h1 {
-    margin-top: -2.937rem;
-  }
+  height: 31.125rem;
+  margin-top: 0.9375rem;
+`
+export const BorderFormAndPayContentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  background: ${(props) => props.theme.colors['gray-label']};
+  /* margin-bottom: 4.937rem; */
 `

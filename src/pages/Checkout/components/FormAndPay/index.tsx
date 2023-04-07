@@ -1,9 +1,13 @@
-import { FormAndPayContainer } from './styles'
+import { TitleCard } from '../../styles'
+import { BorderFormAndPayContentContainer, FormAndPayContainer } from './styles'
 
 export function FormAndPay() {
   return (
-    <FormAndPayContainer>
-      <p>Algo tbm</p>
-    </FormAndPayContainer>
+    <BorderFormAndPayContentContainer>
+      <TitleCard>Complete seu pedido</TitleCard>
+      <FormAndPayContainer>
+        <p>Algo tbm</p>
+      </FormAndPayContainer>
+    </BorderFormAndPayContentContainer>
   )
 }
