@@ -43,7 +43,7 @@ export const TextDetailsIntroContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-top: 4.125rem;
-  margin-bottom: 6.75rem;
+  margin-bottom: 8.75rem;
   row-gap: 1.25rem;
   text {
     font-size: 1rem;
