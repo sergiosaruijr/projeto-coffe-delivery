@@ -13,6 +13,13 @@ export const HeaderContainer = styled.header`
   z-index: 1;
 
   background: ${(props) => props.theme.colors['white-back']};
+
+  a {
+    width: 5.312rem;
+    height: 2.5rem;
+    box-shadow: 0 0 0 0;
+    outline: 0;
+  }
 `
 
 export const HeaderDivContainer = styled.div`
@@ -46,4 +53,11 @@ export const CartContainer = styled.div`
   background: ${(props) => props.theme.colors['yellow-100']};
   width: 100%;
   padding: 0.35rem;
+
+  a {
+    width: 1.375rem;
+    height: 1.375rem;
+    box-shadow: 0 0 0 0;
+    outline: 0;
+  }
 `

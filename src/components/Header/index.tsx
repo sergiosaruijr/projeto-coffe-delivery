@@ -11,10 +11,12 @@ import { MapPin } from 'phosphor-react'
 export function Header() {
   return (
     <HeaderContainer>
-      <img
-        src={logoCoffee}
-        alt="Simbolo que representa um copo de cafe, com o texto 'Coffee Delivery'"
-      />
+      <a href="/">
+        <img
+          src={logoCoffee}
+          alt="Simbolo que representa um copo de cafe, com o texto 'Coffee Delivery'"
+        />
+      </a>
       <HeaderDivContainer>
         <div>
           <LocationContainer>
@@ -25,7 +27,9 @@ export function Header() {
 
         <div>
           <CartContainer>
-            <img src={logoCart} alt="" />
+            <a href="/checkout">
+              <img src={logoCart} alt="" />
+            </a>
           </CartContainer>
         </div>
       </HeaderDivContainer>
