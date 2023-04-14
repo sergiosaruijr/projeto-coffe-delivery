@@ -1,14 +1,18 @@
 import styled from 'styled-components'
 
-export const BorderCoffeeSelectionSContentContainer = styled.div`
+export const BorderCoffeeSelectionContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   /* background: ${(props) => props.theme.colors['gray-label']}; */
   margin-left: 2rem;
+  img {
+    width: 4rem;
+    height: 4rem;
+  }
 `
 
 export const CoffeeSelectContainer = styled.div`
-  background: ${(props) => props.theme.colors['yellow-300']};
+  background: ${(props) => props.theme.colors['purple-300']};
   display: flex;
   flex-direction: column;
   width: 28rem;
@@ -20,8 +24,9 @@ export const CoffeeSelectContainer = styled.div`
 `
 export const CardCoffeeBorder = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  align-items: center;
   width: 23rem;
   height: 6.5rem;
 
@@ -31,8 +36,26 @@ export const CardCoffeeBorder = styled.div`
 `
 
 // Falta parte de dentro do coffee
-export const ImageCoffeeContainer = styled.div`
+export const BorderInfoAndQuantity = styled.div`
   display: flex;
+  flex-direction: column;
+  width: 10.687rem;
+  height: 3.812rem;
+  margin-left: 1.25rem;
+  /* background: ${(props) => props.theme.colors['purple-300']}; */
+`
+export const NameCoffeeContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  /* padding-bottom: 0.5rem; */
+`
+export const ImageAndInfoBorder = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`
+
+export const ImageCoffeeContainer = styled.div`
   width: 4rem;
   height: 4rem;
   background-color: ${(props) => props.theme.colors['gray-label']};
@@ -40,33 +63,65 @@ export const ImageCoffeeContainer = styled.div`
   justify-content: center;
 `
 
-export const InfoCoffeeContainer = styled.div`
+export const BorderQuantityCoffee = styled.div`
   display: flex;
   width: 10.687rem;
   height: 3.812rem;
-  background-color: ${(props) => props.theme.colors['gray-subtitle']};
-  justify-content: space-between;
-  align-items: center;
-`
-
-export const QuantityCoffeeContainer = styled.div`
-  display: flex;
-  width: 10.687rem;
-  height: 3.812rem;
-  background-color: ${(props) => props.theme.colors['gray-subtitle']};
+  background-color: ${(props) => props.theme.colors['gray-hover']};
   /* justify-content: space-between; */
   align-items: center;
+  justify-content: space-between;
 `
 
-export const ButtonQuantityContainer = styled.button`
-  display: flex;
-  width: 4.5rem;
-  height: 2rem;
+export const ButtonBorderContainer = styled.div`
+  div {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
 `
 
 export const ButtonRemoveContainer = styled.button`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 5.687rem;
   height: 2rem;
+  background: ${(props) => props.theme.colors['gray-button']};
+  border-radius: 6px;
+  border: none;
+  border-color: ${(props) => props.theme.colors['gray-button']};
+
+  p {
+    font-size: ${(props) => props.theme.textSizes['components-button-s']};
+    text-transform: uppercase;
+    padding-left: 0.25rem;
+  }
+
+  &:hover {
+    background: ${(props) => props.theme.colors['gray-hover']};
+    transition: 0.1s;
+  }
+
+  &:focus {
+    background: ${(props) => props.theme.colors['purple-100']};
+    border-color: ${(props) => props.theme.colors['purple-300']};
+    border-width: 2px;
+    border-style: solid;
+    box-shadow: 0 0 0 0;
+    outline: 0;
+  }
+`
+
+export const ValueIndividualCoffeeContainer = styled.div`
+  display: flex;
+  height: 1.312rem;
+  margin-bottom: 3.18rem;
+  p {
+    font-size: ${(props) => props.theme.textSizes['text-bold-m']};
+    color: ${(props) => props.theme.colors['gray-text']};
+  }
 `
 
 export const ValuesContainer = styled.div`
@@ -103,5 +158,30 @@ export const ValueTotalContainer = styled.div`
   p {
     font-size: ${(props) => props.theme.textSizes['text-bold-l']};
     color: ${(props) => props.theme.colors['gray-subtitle']};
+  }
+`
+
+export const ButtonConfirmContainer = styled.button`
+  display: flex;
+  width: 23rem;
+  height: 2.875rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  background: ${(props) => props.theme.colors['yellow-300']};
+  border: none;
+  margin-top: 1.5rem;
+  box-shadow: 0 0 0 0;
+  outline: 0;
+
+  h1 {
+    font-size: ${(props) => props.theme.textSizes['components-button-g']};
+    color: ${(props) => props.theme.colors.white};
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    background: ${(props) => props.theme.colors['yellow-600']};
+    transition: 0.1s;
   }
 `

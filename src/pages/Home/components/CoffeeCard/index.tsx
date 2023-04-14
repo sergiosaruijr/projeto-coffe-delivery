@@ -9,7 +9,7 @@ import {
   TextPriceCoffee,
 } from './styles'
 // import coffeeTradicional from '../../assets/coffeeImage/coffee-expresso-tradicional.svg'
-import { QuantityInput } from '../QuantityInput'
+import { QuantityInputHome } from '../../../../components/QuantityInput'
 import { ShoppingCartSimple } from 'phosphor-react'
 import { formatPrice } from '../../../../../src/components/Format/formatPrice'
 
@@ -49,7 +49,7 @@ export function CoffeCard({ coffee }: CoffeeProps) {
           </TextPriceCoffee>
 
           <CoffeeCartAndPriceContainer>
-            <QuantityInput />
+            <QuantityInputHome />
             <button>
               <ShoppingCartSimple size={22} weight="fill" />
             </button>

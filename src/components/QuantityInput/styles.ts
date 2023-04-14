@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const QuantityInputContainer = styled.div`
+export const QuantityInputContainerHome = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -39,5 +39,30 @@ export const IconContainer = styled.button.attrs({ type: 'button' })`
 
   &:not(:disabled):hover {
     color: ${(props) => props.theme.colors['purple-600']};
+  }
+`
+
+export const QuantityInputContainerCheckout = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 6px;
+  background: ${(props) => props.theme.colors['gray-button']};
+  width: 4.5rem;
+  height: 2rem;
+
+  input {
+    text-align: center;
+    width: 4.5rem;
+    height: 2rem;
+    /* height: 2.375rem; */
+    background: ${(props) => props.theme.colors['gray-button']};
+    border: none;
+    border-radius: 6px;
+    color: ${(props) => props.theme.colors['gray-title']};
+  }
+
+  p {
+    text-align: center;
   }
 `
