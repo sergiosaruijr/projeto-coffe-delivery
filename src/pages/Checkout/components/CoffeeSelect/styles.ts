@@ -12,7 +12,7 @@ export const BorderCoffeeSelectionContentContainer = styled.div`
 `
 
 export const CoffeeSelectContainer = styled.div`
-  background: ${(props) => props.theme.colors['purple-300']};
+  background: ${(props) => props.theme.colors['gray-card']};
   display: flex;
   flex-direction: column;
   width: 28rem;
@@ -32,7 +32,7 @@ export const CardCoffeeBorder = styled.div`
 
   margin-bottom: 1.5rem;
   background-color: ${(props) => props.theme.colors['gray-card']};
-  border-bottom: 1px solid ${(props) => props.theme.colors['gray-text']};
+  border-bottom: 1px solid ${(props) => props.theme.colors['gray-button']};
 `
 
 // Falta parte de dentro do coffee
@@ -47,7 +47,10 @@ export const BorderInfoAndQuantity = styled.div`
 export const NameCoffeeContainer = styled.div`
   display: flex;
   flex-direction: column;
-  /* padding-bottom: 0.5rem; */
+  color: ${(props) => props.theme.colors['gray-subtitle']};
+  font-size: ${(props) => props.theme.textSizes['text-regular-m']};
+  height: 1.312rem;
+  margin-top: -1rem;
 `
 export const ImageAndInfoBorder = styled.div`
   display: flex;
@@ -58,19 +61,23 @@ export const ImageAndInfoBorder = styled.div`
 export const ImageCoffeeContainer = styled.div`
   width: 4rem;
   height: 4rem;
-  background-color: ${(props) => props.theme.colors['gray-label']};
+  /* background-color: ${(props) => props.theme.colors['gray-label']}; */
   align-items: center;
   justify-content: center;
+  margin-bottom: 0.5rem;
+  margin-top: -1.5rem;
+  margin-left: 0.25rem;
 `
 
 export const BorderQuantityCoffee = styled.div`
   display: flex;
   width: 10.687rem;
   height: 3.812rem;
-  background-color: ${(props) => props.theme.colors['gray-hover']};
+  /* background-color: ${(props) => props.theme.colors['gray-hover']}; */
   /* justify-content: space-between; */
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 0.5rem;
 `
 
 export const ButtonBorderContainer = styled.div`
@@ -117,9 +124,11 @@ export const ButtonRemoveContainer = styled.button`
 export const ValueIndividualCoffeeContainer = styled.div`
   display: flex;
   height: 1.312rem;
-  margin-bottom: 3.18rem;
+  margin-bottom: 4.5rem;
+  margin-right: 0.25rem;
   p {
     font-size: ${(props) => props.theme.textSizes['text-bold-m']};
+    font-weight: bold;
     color: ${(props) => props.theme.colors['gray-text']};
   }
 `
@@ -131,22 +140,19 @@ export const ValuesContainer = styled.div`
   height: 5.75rem;
   /* background-color: ${(props) => props.theme.colors['gray-text']}; */
 `
-export const ValueItensContainer = styled.div`
+export const ValueItensAndDeliveryContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: 23rem;
   height: 1.312rem;
   margin-bottom: 0.75rem;
   background-color: ${(props) => props.theme.colors['gray-card']};
+  p {
+    font-size: ${(props) => props.theme.textSizes['text-regular-s']};
+    color: ${(props) => props.theme.colors['gray-text']};
+  }
 `
-export const ValueDeliveryContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 23rem;
-  height: 1.312rem;
-  margin-bottom: 0.75rem;
-  background-color: ${(props) => props.theme.colors['gray-card']};
-`
+
 export const ValueTotalContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -158,6 +164,7 @@ export const ValueTotalContainer = styled.div`
   p {
     font-size: ${(props) => props.theme.textSizes['text-bold-l']};
     color: ${(props) => props.theme.colors['gray-subtitle']};
+    font-weight: bold;
   }
 `
 
@@ -183,5 +190,11 @@ export const ButtonConfirmContainer = styled.button`
   &:hover {
     background: ${(props) => props.theme.colors['yellow-600']};
     transition: 0.1s;
+  }
+
+  a {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+    text-decoration: none;
   }
 `

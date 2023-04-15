@@ -7,8 +7,7 @@ import {
   CoffeeSelectContainer,
   ImageCoffeeContainer,
   BorderQuantityCoffee,
-  ValueDeliveryContainer,
-  ValueItensContainer,
+  ValueItensAndDeliveryContainer,
   ValueTotalContainer,
   ValuesContainer,
   ButtonBorderContainer,
@@ -20,7 +19,8 @@ import {
   NameCoffeeContainer,
 } from './styles'
 import { useTheme } from 'styled-components'
-import imgCoffee from '../CoffeeSelect/ame.svg'
+import imgCoffee from '../../../../../public/coffeeImg/tradicional.svg'
+import imgCoffee2 from '../../../../../public/coffeeImg/latte.svg'
 export function CoffeeSelect() {
   const { colors } = useTheme()
   return (
@@ -30,7 +30,6 @@ export function CoffeeSelect() {
       <TitleCard>Cafés selecionados</TitleCard>
       <CoffeeSelectContainer>
         {/* arrumar para ser um componente separado */}
-        <CardCoffeeBorder></CardCoffeeBorder>
         <CardCoffeeBorder>
           <ImageAndInfoBorder>
             <ImageCoffeeContainer>
@@ -51,25 +50,49 @@ export function CoffeeSelect() {
             </BorderInfoAndQuantity>
           </ImageAndInfoBorder>
           <ValueIndividualCoffeeContainer>
-            <p>R$19,90</p>
+            <p>R$ 9,90</p>
+          </ValueIndividualCoffeeContainer>
+        </CardCoffeeBorder>
+        <CardCoffeeBorder>
+          <ImageAndInfoBorder>
+            <ImageCoffeeContainer>
+              <img src={imgCoffee2} alt="" />
+            </ImageCoffeeContainer>
+            <BorderInfoAndQuantity>
+              <NameCoffeeContainer>Latte</NameCoffeeContainer>
+              <BorderQuantityCoffee>
+                <ButtonBorderContainer>
+                  <QuantityInputCheckout />
+                </ButtonBorderContainer>
+                <ButtonRemoveContainer>
+                  <Trash size={16} weight="bold" color={colors['purple-300']} />
+                  <p>Remover</p>
+                </ButtonRemoveContainer>
+              </BorderQuantityCoffee>
+            </BorderInfoAndQuantity>
+          </ImageAndInfoBorder>
+          <ValueIndividualCoffeeContainer>
+            <p>R$ 19,80</p>
           </ValueIndividualCoffeeContainer>
         </CardCoffeeBorder>
         <ValuesContainer>
-          <ValueItensContainer>
+          <ValueItensAndDeliveryContainer>
             <p>Total de itens</p>
-            <p>R$ 29,70</p>
-          </ValueItensContainer>
-          <ValueDeliveryContainer>
+            R$ 29,70
+          </ValueItensAndDeliveryContainer>
+          <ValueItensAndDeliveryContainer>
             <p>Entrega</p>
-            <p>R$ 3,50</p>
-          </ValueDeliveryContainer>
+            R$ 3,50
+          </ValueItensAndDeliveryContainer>
           <ValueTotalContainer>
             <p>Total</p>
             <p>R$ 33,20</p>
           </ValueTotalContainer>
         </ValuesContainer>
         <ButtonConfirmContainer>
-          <h1>Confirmar Pedido</h1>
+          <a href="/success">
+            <h1>Confirmar Pedido</h1>
+          </a>
         </ButtonConfirmContainer>
       </CoffeeSelectContainer>
     </BorderCoffeeSelectionContentContainer>

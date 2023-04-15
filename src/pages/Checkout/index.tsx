@@ -11,15 +11,8 @@ import {
 export function Checkout() {
   return (
     <CheckoutContainer>
-      {/* <BorderContentContainer> */}
-      {/* <TitleCard>Complete seu pedido</TitleCard> */}
       <FormAndPay />
-      {/* </BorderContentContainer> */}
-
-      {/* <BorderContentContainer> */}
-      {/* <TitleCard>Cafés selecionados</TitleCard> */}
       <CoffeeSelect />
-      {/* </BorderContentContainer> */}
     </CheckoutContainer>
   )
 }
