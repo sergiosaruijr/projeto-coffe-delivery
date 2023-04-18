@@ -1,13 +1,5 @@
 import styled from 'styled-components'
 
-// export const CheckoutContainer = styled.div`
-//   width: 100%;
-//   display: flex;
-//   align-items: center;
-//   padding-top: 5.87rem;
-//   padding-left: 10rem;
-//   padding-right: 10rem;
-// `
 export const CheckoutContainer = styled.div`
   width: 100%;
   display: grid;
@@ -22,9 +14,3 @@ export const TitleCard = styled.h1`
   font-family: 'Baloo 2';
   color: ${(props) => props.theme.colors['gray-title']};
 `
-
-export const FormContentContainer = styled.div``
-
-export const TextPayContentContainer = styled.div``
-
-export const FormatPayContentContainer = styled.div``

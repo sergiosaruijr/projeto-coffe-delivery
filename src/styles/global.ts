@@ -32,4 +32,12 @@ export const GlobalStyle = createGlobalStyle`
   input[type="number"] {
     -moz-appearance: textfield;
   }
+
+  :root{
+    --gradient: linear-gradient(
+      to right,
+      rgb(149 114 252 / 1),
+      rgb(226 212 92/ 1),
+    )
+  }
 `

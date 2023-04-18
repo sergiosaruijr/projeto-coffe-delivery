@@ -10,14 +10,19 @@
     "lint": "eslint src --ext .ts,.tsx "
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.1.0",
+    "jquery-mask-plugin": "^1.14.16",
     "phosphor-react": "^1.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.43.9",
     "react-router-dom": "^6.9.0",
-    "styled-components": "^5.3.8"
+    "styled-components": "^5.3.8",
+    "zod": "^3.21.4"
   },
   "devDependencies": {
     "@rocketseat/eslint-config": "^1.2.0",
+    "@types/cleave.js": "^1.4.7",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@types/styled-components": "^5.1.26",

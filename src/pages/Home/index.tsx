@@ -1,7 +1,7 @@
 import { Intro } from './components/Intro/index'
 import { HomeCoffeeBorderContentContainer, HomeContainer } from './styles'
 import { CoffeCard } from './components/CoffeeCard'
-import { coffees } from '../../InfoCoffes/coffes'
+import { coffees } from '../../components/InfoCoffes/coffes'
 
 export function Home() {
   return (

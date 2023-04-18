@@ -19,6 +19,8 @@ export const QuantityInputContainerHome = styled.div`
     border: none;
     border-radius: 6px;
     color: ${(props) => props.theme.colors['gray-title']};
+    box-shadow: 0 0 0 0;
+    outline: 0;
   }
 `
 
@@ -32,6 +34,8 @@ export const IconContainer = styled.button.attrs({ type: 'button' })`
   position: relative;
   margin-right: -1.5rem;
   margin-left: -1.5rem;
+  box-shadow: 0 0 0 0;
+  outline: 0;
   &:disabled {
     opacity: 0.4;
     /* color: ${(props) => props.theme.colors['purple-300']}; */
@@ -50,7 +54,8 @@ export const QuantityInputContainerCheckout = styled.div`
   background: ${(props) => props.theme.colors['gray-button']};
   width: 4.5rem;
   height: 2rem;
-
+  box-shadow: 0 0 0 0;
+  outline: 0;
   input {
     text-align: center;
     width: 4.5rem;
@@ -60,6 +65,8 @@ export const QuantityInputContainerCheckout = styled.div`
     border: none;
     border-radius: 6px;
     color: ${(props) => props.theme.colors['gray-title']};
+    box-shadow: 0 0 0 0;
+    outline: 0;
   }
 
   p {

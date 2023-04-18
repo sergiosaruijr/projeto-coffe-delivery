@@ -5,10 +5,7 @@ import {
   MapPinLine,
   Money,
 } from 'phosphor-react'
-import {
-  // InfoIcon,
-  InfoIconWithoutBorder,
-} from '../../../../components/InfoIcon'
+import { InfoIconWithoutBorder } from '../../../../components/InfoIcon'
 import { TitleCard } from '../../styles'
 import {
   BorderFormAndPayContentContainer,
@@ -28,7 +25,15 @@ import {
 } from './styles'
 import { useTheme } from 'styled-components'
 
+// import { useForm } from 'react-hook-form'
+// import { zodResolver } from '@hookform/resolvers/zod'
+// import * as zod from 'zod'
+
+// const newCycleFormValidationSchema = zod.object({})
+
 export function FormAndPay() {
+  // const { register, handleSubmit, watch } = useForm()
+
   const { colors } = useTheme()
   return (
     <BorderFormAndPayContentContainer>
@@ -45,14 +50,13 @@ export function FormAndPay() {
         </BorderText>
         <FormBorderContent>
           <div>
-            {/* <label htmlFor="" placeholder="CEP"></label> */}
-            <ZipCode type="text" placeholder="CEP" />
+            <ZipCode type="text" placeholder="CEP" className="cep" id="cep" />
           </div>
           <div>
             <StreetName type="text" placeholder="Rua" />
           </div>
           <div>
-            <NumberEndress type="text" placeholder="Número" />
+            <NumberEndress type="text" placeholder="Número" maxLength={6} />
           </div>
           <div>
             <Complement type="text" placeholder="Complemento" />
@@ -64,10 +68,8 @@ export function FormAndPay() {
             <City type="text" placeholder="Cidade" />
           </div>
           <div>
-            <State type="text" placeholder="UF" />
+            <State type="text" placeholder="UF" maxLength={2} />
           </div>
-
-          {/* <p>Colocar Formularios aqui</p> */}
         </FormBorderContent>
       </FormContainer>
       <PayContainer>

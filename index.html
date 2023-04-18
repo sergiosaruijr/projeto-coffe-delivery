@@ -10,10 +10,24 @@
 
     
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Roboto+Mono:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/jquery.mask.js"></script>
     <title>Coffee Delivery</title>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('#date').mask('00/00/0000');
+        $('#time').mask('00:00:00');
+        $('#cep').mask('00000-000');
+        $('#phone').mask('(00) 00000-0000');
+        $('#cpf').mask('000.000.000-00');
+        $('#money').mask('000.000.000.000,00');
+      });
+    </script>
+    
   </body>
 </html>
