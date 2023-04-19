@@ -21,6 +21,7 @@ import {
 import { useTheme } from 'styled-components'
 import imgCoffee from '../../../../../public/coffeeImg/tradicional.svg'
 import imgCoffee2 from '../../../../../public/coffeeImg/latte.svg'
+
 export function CoffeeSelect() {
   const { colors } = useTheme()
   return (

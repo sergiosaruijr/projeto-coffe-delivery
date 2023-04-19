@@ -24,6 +24,7 @@ import {
   State,
 } from './styles'
 import { useTheme } from 'styled-components'
+import { useState } from 'react'
 
 // import { useForm } from 'react-hook-form'
 // import { zodResolver } from '@hookform/resolvers/zod'
@@ -31,10 +32,24 @@ import { useTheme } from 'styled-components'
 
 // const newCycleFormValidationSchema = zod.object({})
 
+// export const LocationCity = () = {
+//   const [valueCity, setValueCity] = useState('');
+
+//   const handleCity = (event) => {
+//     setValue(event.target.value);
+//   }
+// }
+
 export function FormAndPay() {
   // const { register, handleSubmit, watch } = useForm()
 
   const { colors } = useTheme()
+  const [ValueInputCity, setValueCity] = useState('')
+
+  const handleChange = (event: { target: { value: any } }) => {
+    setValueCity(event.target.value)
+  }
+
   return (
     <BorderFormAndPayContentContainer>
       <TitleCard>Complete seu pedido</TitleCard>
@@ -65,7 +80,8 @@ export function FormAndPay() {
             <District type="text" placeholder="Bairro" />
           </div>
           <div>
-            <City type="text" placeholder="Cidade" />
+            <City type="text" placeholder="Cidade" onChange={handleChange} />
+            <p>{ValueInputCity}</p>
           </div>
           <div>
             <State type="text" placeholder="UF" maxLength={2} />

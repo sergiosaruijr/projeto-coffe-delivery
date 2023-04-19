@@ -7,8 +7,10 @@ import {
 import logoCoffee from '../../assets/logo-coffee.svg'
 import logoCart from '../../assets/logo-cart.svg'
 import { MapPin } from 'phosphor-react'
+// import { ValueInputCity } from '../../../src/pages/Checkout/components/FormAndPay'
 
 export function Header() {
+  // const ValueCity = ValueInputCity.toString()
   return (
     <HeaderContainer>
       <a href="/">

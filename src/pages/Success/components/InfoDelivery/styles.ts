@@ -8,9 +8,7 @@ export const BorderInfoDelivery = styled.div`
   width: 32.875rem;
   height: 16.875rem;
   padding: 2.5rem;
-  border-color: ${(props) => props.theme.colors['purple-300']};
-  background: ${(props) => props.theme.colors['yellow-100']};
-  /* border: 2px solid; */
+  background: ${(props) => props.theme.colors['white-back']};
 
   --gradient: linear-gradient(
     to right,
@@ -18,11 +16,15 @@ export const BorderInfoDelivery = styled.div`
     rgb(149 114 252 / 1)
   );
 
-  border-radius: 6px 36px 6px 36px;
-  border: double 5px transparent;
-  border-image: var(--gradient) 1;
-  background-origin: border-box;
+  /* border: double 5px transparent;
+  border-image: var(--gradient) 1; */
+  /* background-origin: border-box; */
   /* background-clip: content-box, border-box; */
+
+  border-radius: 6px 36px 6px 36px;
+  background: linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(102.89deg, #dbac2c 2.61%, #8047f8 98.76%) border-box;
+  border: 2px solid transparent;
 `
 
 export const BorderInfoContent = styled.div`
