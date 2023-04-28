@@ -53,11 +53,28 @@ export const CartContainer = styled.div`
   background: ${(props) => props.theme.colors['yellow-100']};
   width: 100%;
   padding: 0.35rem;
+  position: relative;
 
   a {
     width: 1.375rem;
     height: 1.375rem;
     box-shadow: 0 0 0 0;
     outline: 0;
+  }
+
+  span {
+    position: absolute;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    top: calc(-1.25rem / 2);
+    right: calc(-1.25rem / 2);
+    color: ${(props) => props.theme.colors.white};
+    background: ${(props) => props.theme.colors['yellow-600']};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
   }
 `

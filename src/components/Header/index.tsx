@@ -7,10 +7,12 @@ import {
 import logoCoffee from '../../assets/logo-coffee.svg'
 import logoCart from '../../assets/logo-cart.svg'
 import { MapPin } from 'phosphor-react'
+import { useCartContext } from '../../hooks/useCartContext'
 // import { ValueInputCity } from '../../../src/pages/Checkout/components/FormAndPay'
 
 export function Header() {
-  // const ValueCity = ValueInputCity.toString()
+  const { cartQuantity } = useCartContext()
+
   return (
     <HeaderContainer>
       <a href="/">
@@ -30,6 +32,7 @@ export function Header() {
         <div>
           <CartContainer>
             <a href="/checkout">
+              {cartQuantity >= 1 && <span>{cartQuantity}</span>}
               <img src={logoCart} alt="" />
             </a>
           </CartContainer>
