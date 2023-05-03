@@ -12,25 +12,51 @@ import {
   ValueIndividualCoffeeContainer,
 } from './styles'
 
-import imgCoffee from '../../../../../public/coffeeImg/tradicional.svg'
 import { useTheme } from 'styled-components'
+import { CartItem } from '../../../../contexts/CartContext'
+import { formatPrice } from '../../../../components/Format/formatPrice'
+import { useCartContext } from '../../../../hooks/useCartContext'
 
-export function CoffeeCard() {
+interface CoffeeCardProps {
+  coffee: CartItem
+}
+
+export function CoffeeCard({ coffee }: CoffeeCardProps) {
   const { colors } = useTheme()
+  const { changeCartItemQuantity, removeCart } = useCartContext()
+
+  function handleIncrease() {
+    changeCartItemQuantity(coffee.id, 'increase')
+  }
+
+  function handleDecrease() {
+    changeCartItemQuantity(coffee.id, 'decrease')
+  }
+
+  function handleRemove() {
+    removeCart(coffee.id)
+  }
+
+  const coffeeTotal = coffee.price * coffee.quantity
+  const formatedPrice = formatPrice(coffeeTotal)
   return (
     <CardCoffeeBorder>
       <ImageAndInfoBorder>
         <ImageCoffeeContainer>
-          <img src={imgCoffee} alt="" />
+          <img src={`/coffeeImg/${coffee.photo}`} alt="" />
         </ImageCoffeeContainer>
         <BorderInfoAndQuantity>
-          <NameCoffeeContainer>Expresso Tradicional</NameCoffeeContainer>
+          <NameCoffeeContainer>{coffee.name}</NameCoffeeContainer>
           <BorderQuantityCoffee>
             {/* <QuantityInputCheckout /> */}
             <ButtonBorderContainer>
-              <QuantityInputCheckout />
+              <QuantityInputCheckout
+                onIncrease={handleIncrease}
+                onDecrease={handleDecrease}
+                quantity={coffee.quantity}
+              />
             </ButtonBorderContainer>
-            <ButtonRemoveContainer>
+            <ButtonRemoveContainer onClick={handleRemove}>
               <Trash size={16} weight="bold" color={colors['purple-300']} />
               <p>Remover</p>
             </ButtonRemoveContainer>
@@ -38,7 +64,7 @@ export function CoffeeCard() {
         </BorderInfoAndQuantity>
       </ImageAndInfoBorder>
       <ValueIndividualCoffeeContainer>
-        <p>R$ 9,90</p>
+        <p>R$ {formatedPrice}</p>
       </ValueIndividualCoffeeContainer>
     </CardCoffeeBorder>
   )

@@ -35,7 +35,7 @@ export function CoffeCard({ coffee }: CoffeeProps) {
     setQuantity((state) => state + 1)
   }
 
-  function handleDecrase() {
+  function handleDecrease() {
     setQuantity((state) => state - 1)
   }
 
@@ -73,7 +73,7 @@ export function CoffeCard({ coffee }: CoffeeProps) {
           <CoffeeCartAndPriceContainer>
             <QuantityInputHome
               onIncrease={handleIncrease}
-              onDecrease={handleDecrase}
+              onDecrease={handleDecrease}
               quantity={quantity}
             />
             <button onClick={handleAddToCart}>

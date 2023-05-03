@@ -30,15 +30,19 @@ export function QuantityInputHome({
   )
 }
 
-export function QuantityInputCheckout() {
+export function QuantityInputCheckout({
+  onIncrease,
+  onDecrease,
+  quantity,
+}: QuantityInputProps) {
   return (
     <QuantityInputContainerCheckout>
-      <IconContainer id="minus">
+      <IconContainer disabled={quantity <= 1} id="minus" onClick={onDecrease}>
         <Minus size={14} weight="bold" />
       </IconContainer>
-      <input type="number" readOnly value={1} />
+      <input type="number" readOnly value={quantity} />
       <IconContainer id="plus">
-        <Plus size={14} weight="bold" />
+        <Plus size={14} weight="bold" onClick={onIncrease} />
       </IconContainer>
     </QuantityInputContainerCheckout>
   )
