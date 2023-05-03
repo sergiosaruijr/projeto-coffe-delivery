@@ -1,27 +1,5 @@
 import styled from 'styled-components'
 
-export const BorderCoffeeSelectionContentContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  /* background: ${(props) => props.theme.colors['gray-label']}; */
-  margin-left: 2rem;
-  img {
-    width: 4rem;
-    height: 4rem;
-  }
-`
-
-export const CoffeeSelectContainer = styled.div`
-  background: ${(props) => props.theme.colors['gray-card']};
-  display: flex;
-  flex-direction: column;
-  width: 28rem;
-  /* height: 31.125rem; */
-  margin-top: 0.9375rem;
-  align-items: center;
-  border-radius: 6px 36px 6px 36px;
-  padding-top: 2.5rem;
-`
 export const CardCoffeeBorder = styled.div`
   display: flex;
   /* flex-direction: column; */

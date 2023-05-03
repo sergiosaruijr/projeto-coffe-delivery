@@ -8,6 +8,7 @@ import logoCoffee from '../../assets/logo-coffee.svg'
 import logoCart from '../../assets/logo-cart.svg'
 import { MapPin } from 'phosphor-react'
 import { useCartContext } from '../../hooks/useCartContext'
+import { NavLink } from 'react-router-dom'
 // import { ValueInputCity } from '../../../src/pages/Checkout/components/FormAndPay'
 
 export function Header() {
@@ -15,12 +16,12 @@ export function Header() {
 
   return (
     <HeaderContainer>
-      <a href="/">
+      <NavLink to="/">
         <img
           src={logoCoffee}
           alt="Simbolo que representa um copo de cafe, com o texto 'Coffee Delivery'"
         />
-      </a>
+      </NavLink>
       <HeaderDivContainer>
         <div>
           <LocationContainer>
@@ -31,10 +32,10 @@ export function Header() {
 
         <div>
           <CartContainer>
-            <a href="/checkout">
+            <NavLink to="/checkout">
               {cartQuantity >= 1 && <span>{cartQuantity}</span>}
               <img src={logoCart} alt="" />
-            </a>
+            </NavLink>
           </CartContainer>
         </div>
       </HeaderDivContainer>
