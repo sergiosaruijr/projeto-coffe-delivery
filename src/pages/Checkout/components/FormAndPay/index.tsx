@@ -11,45 +11,15 @@ import {
   BorderFormAndPayContentContainer,
   BorderText,
   FormContainer,
-  FormBorderContent,
   PayContainer,
   PayMethodContainer,
   PayMethodButton,
-  ZipCode,
-  StreetName,
-  Complement,
-  NumberEndress,
-  District,
-  City,
-  State,
 } from './styles'
+import { FormAddress } from '../FormAddress'
 import { useTheme } from 'styled-components'
-import { useState } from 'react'
-
-// import { useForm } from 'react-hook-form'
-// import { zodResolver } from '@hookform/resolvers/zod'
-// import * as zod from 'zod'
-
-// const newCycleFormValidationSchema = zod.object({})
-
-// export const LocationCity = () = {
-//   const [valueCity, setValueCity] = useState('');
-
-//   const handleCity = (event) => {
-//     setValue(event.target.value);
-//   }
-// }
 
 export function FormAndPay() {
-  // const { register, handleSubmit, watch } = useForm()
-
   const { colors } = useTheme()
-  const [ValueInputCity, setValueCity] = useState('')
-
-  const handleChange = (event: { target: { value: any } }) => {
-    setValueCity(event.target.value)
-  }
-
   return (
     <BorderFormAndPayContentContainer>
       <TitleCard>Complete seu pedido</TitleCard>
@@ -63,30 +33,7 @@ export function FormAndPay() {
           ></InfoIconWithoutBorder>
           {/* </TextContentContainer> */}
         </BorderText>
-        <FormBorderContent>
-          <div>
-            <ZipCode type="text" placeholder="CEP" className="cep" id="cep" />
-          </div>
-          <div>
-            <StreetName type="text" placeholder="Rua" />
-          </div>
-          <div>
-            <NumberEndress type="text" placeholder="Número" maxLength={6} />
-          </div>
-          <div>
-            <Complement type="text" placeholder="Complemento" />
-          </div>
-          <div>
-            <District type="text" placeholder="Bairro" />
-          </div>
-          <div>
-            <City type="text" placeholder="Cidade" onChange={handleChange} />
-            <p>{ValueInputCity}</p>
-          </div>
-          <div>
-            <State type="text" placeholder="UF" maxLength={2} />
-          </div>
-        </FormBorderContent>
+        <FormAddress />
       </FormContainer>
       <PayContainer>
         <BorderText>

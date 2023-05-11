@@ -54,6 +54,8 @@ export const QuantityInputContainerCheckout = styled.div`
   background: ${(props) => props.theme.colors['gray-button']};
   width: 4.5rem;
   height: 2rem;
+  box-shadow: 0 0 0 0;
+  outline: 0;
 
   input {
     text-align: center;

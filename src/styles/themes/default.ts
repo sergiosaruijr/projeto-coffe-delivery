@@ -22,6 +22,8 @@ export const defaultTheme = {
     'yellow-100': '#F1E9C9',
     'yellow-300': '#DBAC2C',
     'yellow-600': '#C47F17',
+
+    'red-error': '#880808',
   },
   textSizes: {
     'title-title-xl': '3rem',
