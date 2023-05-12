@@ -6,6 +6,7 @@ import * as zod from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm, FormProvider } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
+import { useCartContext } from '../../hooks/useCartContext'
 
 enum PayMethods {
   credit = 'credit',
@@ -44,11 +45,13 @@ export function Checkout() {
 
   const navigate = useNavigate()
 
+  const { cleanCart } = useCartContext()
+
   function handleConfirmForm(data: ConfirmFormData) {
     navigate('/success', {
       state: data,
     })
-    console.log(data)
+    cleanCart()
   }
 
   return (

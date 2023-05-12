@@ -12,19 +12,30 @@ import iconDelivery from '../../assets/icon-delivery.svg'
 import { useTheme } from 'styled-components'
 import { InfoIcon } from '../../components/InfoIcon'
 import { MapPin, CurrencyDollar, Timer } from 'phosphor-react'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { FormData } from '../Checkout'
+import { payMethods } from '../Checkout/components/PayMethod'
+import { useEffect } from 'react'
 
 interface LocationType {
   state: FormData
 }
 
-const { state } = useLocation() as unknown as LocationType
-
-console.log(state)
-
 export function Success() {
   const { colors } = useTheme()
+
+  const { state } = useLocation() as unknown as LocationType
+
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if (!state) {
+      navigate('/')
+    }
+  }, [])
+
+  if (!state) return <></>
+
   return (
     <SuccessContainer>
       <BorderMessage>
@@ -42,10 +53,17 @@ export function Success() {
               icon={<MapPin weight="fill" />}
               text={
                 <p>
-                  Entrega em <strong>Rua Benjamin Constant, 1974</strong>{' '}
+                  Entrega em{' '}
+                  <strong>
+                    Rua {state.street}, {state.number}
+                  </strong>{' '}
                 </p>
               }
-              text2={<p>OI</p>}
+              text2={
+                <p>
+                  {state.city} - {state.discrict}, {state.uf}
+                </p>
+              }
               iconBgColor={colors['purple-300']}
             ></InfoIcon>
           </BorderInfoContent>
@@ -61,7 +79,7 @@ export function Success() {
             <InfoIcon
               icon={<CurrencyDollar weight="fill" />}
               text="Pagamento na entrega"
-              textBold="Cartão de Crédito"
+              textBold={<strong>{payMethods[state.payMethod].label}</strong>}
               iconBgColor={colors['yellow-600']}
             ></InfoIcon>
           </BorderInfoContent>
