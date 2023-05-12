@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const InputWrapper = styled.div`
   display: flex;
@@ -8,6 +8,32 @@ export const InputWrapper = styled.div`
   > p {
     color: ${(props) => props.theme.colors['red-error']};
   }
+`
+
+interface InputContainerProps {
+  hasError: boolean
+}
+
+export const InputStyleContainer = styled.div<InputContainerProps>`
+  height: 2.625rem;
+  border-radius: 4px;
+  border: 1px solid ${(props) => props.theme.colors['gray-button']};
+  background: ${(props) => props.theme.colors['gray-input']};
+  display: flex;
+  align-items: center;
+  transition: 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  &:focus-within {
+    border-color: ${(props) => props.theme.colors['yellow-600']};
+  }
+  ${({ hasError }) =>
+    hasError &&
+    css`
+      border-color: ${(props) => props.theme.colors['red-error']};
+    `}
 `
 
 export const InputStyled = styled.input`
@@ -22,25 +48,10 @@ export const InputStyled = styled.input`
     color: ${(props) => props.theme.colors['gray-label']};
   }
 `
-export const InputStyleContainer = styled.div`
-  height: 2.625rem;
-  border-radius: 4px;
-  border: 1px solid ${(props) => props.theme.colors['gray-button']};
-  background: ${(props) => props.theme.colors['gray-input']};
-  transition: 0.4s;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  /* overflow: hidden; */
-  &:focus {
-    border-color: ${(props) => props.theme.colors['yellow-600']};
-  }
 
-  color: ${(props) => props.theme.colors['gray-text']};
+export const RightText = styled.p`
   font-size: 0.75rem;
-  padding: 0.75rem;
-
-  &::placeholder {
-    color: ${(props) => props.theme.colors['gray-label']};
-  }
+  margin-right: 0.75rem;
+  font-style: italic;
+  color: ${(props) => props.theme.colors['gray-label']};
 `

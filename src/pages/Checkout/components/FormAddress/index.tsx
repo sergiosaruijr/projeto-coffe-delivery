@@ -1,61 +1,83 @@
-import { useState } from 'react'
-import {
-  City,
-  Complement,
-  District,
-  FormBorderContent,
-  NumberEndress,
-  State,
-  StreetName,
-  // ZipCode,
-} from './styles'
+// import { useState } from 'react'
+import { FormBorderContent } from './styles'
 import { Input } from '../../../../components/Input'
 import { useFormContext } from 'react-hook-form'
 
-// interface ErrorsType {
-//   errors: {
-//     [key: string]: {
-//       message: string
-//     }
-//   }
-// }
+interface ErrorsType {
+  errors: {
+    [key: string]: {
+      message: string
+    }
+  }
+}
 
 export function FormAddress() {
-  const [ValueInputCity, setValueCity] = useState('')
-  const handleChange = (event: { target: { value: any } }) => {
-    setValueCity(event.target.value)
-  }
-  const { register } = useFormContext()
+  const { register, formState } = useFormContext()
 
-  // const { errors } = formState as unknown as ErrorsType
+  const { errors } = formState as unknown as ErrorsType
+
   return (
-    <FormBorderContent>
+    <FormBorderContent className="interna">
       <Input
         type="text"
         placeholder="CEP"
         className="cep"
         id="cep"
         {...register('cep')}
-        // error={errors.cep?.message}
+        error={errors.cep?.message}
       />
-
-      <StreetName type="text" placeholder="Rua" />
-
+      <Input
+        type="text"
+        placeholder="Rua"
+        className="street"
+        {...register('street')}
+        error={errors.street?.message}
+      />
+      <Input
+        type="text"
+        placeholder="Número"
+        maxLength={6}
+        className="number"
+        {...register('number')}
+        error={errors.number?.message}
+      />
+      <Input
+        type="text"
+        placeholder="Complemento"
+        className="complement"
+        {...register('complement')}
+        error={errors.complement?.message}
+        rightText="opcional"
+      />
       <div>
-        <NumberEndress type="text" placeholder="Número" maxLength={6} />
+        <Input
+          type="text"
+          placeholder="Bairro"
+          className="discrict"
+          {...register('discrict')}
+          error={errors.discrict?.message}
+        />
       </div>
       <div>
-        <Complement type="text" placeholder="Complemento" />
+        <Input
+          type="text"
+          placeholder="Cidade"
+          // onChange={handleChange}
+          className="city"
+          {...register('city')}
+          error={errors.city?.message}
+        />
+        {/* <p>{ValueInputCity}</p> */}
       </div>
       <div>
-        <District type="text" placeholder="Bairro" />
-      </div>
-      <div>
-        <City type="text" placeholder="Cidade" onChange={handleChange} />
-        <p>{ValueInputCity}</p>
-      </div>
-      <div>
-        <State type="text" placeholder="UF" maxLength={2} />
+        <Input
+          type="text"
+          placeholder="UF"
+          maxLength={2}
+          className="uf"
+          {...register('uf')}
+          error={errors.uf?.message}
+        />
       </div>
     </FormBorderContent>
   )

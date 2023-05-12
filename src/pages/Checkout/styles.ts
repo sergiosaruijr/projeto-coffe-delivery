@@ -14,3 +14,10 @@ export const TitleCard = styled.h1`
   font-family: 'Baloo 2';
   color: ${(props) => props.theme.colors['gray-title']};
 `
+export const BorderText = styled.div`
+  display: flex;
+  /* background: ${(props) => props.theme.colors['yellow-100']}; */
+  width: 35rem;
+  height: 2.75rem;
+  margin-top: 2.5rem;
+`

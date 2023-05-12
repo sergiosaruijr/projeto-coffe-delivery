@@ -2,6 +2,15 @@ import { useTheme } from 'styled-components'
 import { InfoIcon } from '../../../../components/InfoIcon'
 import { BorderInfoContent, BorderInfoDelivery } from './styles'
 import { MapPin, CurrencyDollar, Timer } from 'phosphor-react'
+import { useLocation } from 'react-router-dom'
+import { FormData } from '../../../Checkout'
+
+interface LocationType {
+  state: FormData
+}
+
+// eslint-disable-next-line react-hooks/rules-of-hooks
+const { state } = useLocation() as unknown as LocationType
 
 export function InfoDelivery() {
   const { colors } = useTheme()
@@ -11,7 +20,7 @@ export function InfoDelivery() {
         <InfoIcon
           icon={<MapPin weight="fill" />}
           text="Entrega em Rua Benjamin Constant, 1974"
-          text2="Londrina - Paraná, PR"
+          text2={<p>{state.street}</p>}
           iconBgColor={colors['purple-300']}
         ></InfoIcon>
       </BorderInfoContent>
