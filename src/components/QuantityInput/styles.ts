@@ -66,8 +66,8 @@ export const QuantityInputContainerCheckout = styled.div`
     border: none;
     border-radius: 6px;
     color: ${(props) => props.theme.colors['gray-title']};
-    box-shadow: 0 0 0 0;
-    outline: 0;
+    /* box-shadow: 0 0 0 0;
+    outline: 0; */
   }
 
   p {
