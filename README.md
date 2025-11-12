@@ -1,4 +1,5 @@
-# Projeto Coffee
+<h1 align="center" style="font-weight: bold;">Projeto Coffee Delivery 💻</h1>
+
 Aplicação de delivery de café, utilizando React e outras funcionalidades.
 Sendo possível escolher o café desejado e sua quantidade, adicionar eles no carrinho. Ao clicar no carrinho, levando a página de preenchimento de dados, assim como pagamento, podendo acrescentar ou remover cafés também.
 Por fim, ao confirmar o pedido, coleta esses dados e constrói a página de finalização com esses dados presentes.
